@@ -42,7 +42,7 @@ return new Topping("Tomato", 0, 0);
     }
     @Bean
     public Pizza pizzaHawaiana(){
-        return new Pizza("Pizza Hawaiana", pizzaMargherita().getPrice() + getToppingHam().getPrice()+ getToppingPineaple().getPrice(), pizzaMargherita().getCalories()+ getToppingHam().getCalories() + getToppingPineaple().getCalories(), Arrays.asList(getToppingCheese(), getToppingTomato(), getToppingHam(), getToppingPineaple()) );
+        return new Pizza("Pizza Hawaiana",Math.floor(pizzaMargherita().getPrice() + getToppingHam().getPrice()+ getToppingPineaple().getPrice()) , pizzaMargherita().getCalories()+ getToppingHam().getCalories() + getToppingPineaple().getCalories(), Arrays.asList(getToppingCheese(), getToppingTomato(), getToppingHam(), getToppingPineaple()) );
     }
     @Bean
     public Pizza pizzaSalami(){

@@ -1,10 +1,7 @@
 package marinalucentini.backend_w5_d4.entities;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -13,6 +10,9 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
+
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn (name = "tipo_elemento")
 public abstract class ElementMenu {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

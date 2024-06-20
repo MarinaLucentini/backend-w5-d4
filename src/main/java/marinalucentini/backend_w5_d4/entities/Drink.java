@@ -1,5 +1,6 @@
 package marinalucentini.backend_w5_d4.entities;
 
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,6 +12,7 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
+@DiscriminatorValue("drink")
 public class Drink extends ElementMenu{
     private double quantity;
 
