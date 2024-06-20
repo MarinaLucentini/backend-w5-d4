@@ -33,9 +33,9 @@ public class MyRunner implements CommandLineRunner {
         Drink drink = context.getBean("water", Drink.class);
         Drink drink1 = context.getBean("wine", Drink.class);
         Drink drink2 = context.getBean("lemonade", Drink.class);
-       drinkServices.saveDrink(drink);
-       drinkServices.saveDrink(drink1);
-       drinkServices.saveDrink(drink2);
+//       drinkServices.saveDrink(drink);
+//       drinkServices.saveDrink(drink1);
+//       drinkServices.saveDrink(drink2);
         Topping topping = context.getBean("getToppingCheese",Topping.class);
         Topping topping1 = context.getBean("getToppingTomato", Topping.class);
         Topping topping2 = context.getBean("getToppingHam", Topping.class);
@@ -54,5 +54,8 @@ public class MyRunner implements CommandLineRunner {
 //pizzaServices.savePizza(pizza3);
 //pizzaServices.savePizza(pizza1);
 //        pizzaServices.savePizza(pizza4);
+//pizzaServices.findAll().forEach(el-> System.out.println(el));
+        System.out.println(pizzaServices.findByName("Pizza Hawaiana").getCalories());
+
     }
 }
