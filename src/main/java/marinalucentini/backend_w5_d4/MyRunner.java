@@ -35,27 +35,28 @@ public class MyRunner implements CommandLineRunner {
         Drink drink2 = context.getBean("lemonade", Drink.class);
 //       drinkServices.saveDrink(drink);
 //       drinkServices.saveDrink(drink1);
-//       drinkServices.saveDrink(drink2);
+//      drinkServices.saveDrink(drink2);
         Topping topping = context.getBean("getToppingCheese",Topping.class);
         Topping topping1 = context.getBean("getToppingTomato", Topping.class);
         Topping topping2 = context.getBean("getToppingHam", Topping.class);
         Topping topping3 = context.getBean("getToppingOnion", Topping.class);
         Topping topping4 = context.getBean("getToppingPineaple", Topping.class);
         Topping topping5 = context.getBean("getToppingSalami", Topping.class);
-//        toppingServices.saveTopping(topping);
+//       toppingServices.saveTopping(topping);
 //        toppingServices.saveTopping(topping1);
 //        toppingServices.saveTopping(topping2);
 //        toppingServices.saveTopping(topping3);
-//        toppingServices.saveTopping(topping4);
-//        toppingServices.saveTopping(topping5);
-//
+//       toppingServices.saveTopping(topping4);
+//       toppingServices.saveTopping(topping5);
+////
 //pizzaServices.savePizza(pizza);
 //pizzaServices.savePizza(pizza2);
 //pizzaServices.savePizza(pizza3);
 //pizzaServices.savePizza(pizza1);
-//        pizzaServices.savePizza(pizza4);
-//pizzaServices.findAll().forEach(el-> System.out.println(el));
-        System.out.println(pizzaServices.findByName("Pizza Hawaiana").getCalories());
+//       pizzaServices.savePizza(pizza4);
+       System.out.println(pizzaServices.findAll().getFirst().getIngredients().getFirst().getName());
+
+       // System.out.println(pizzaServices.findByName("Pizza Hawaiana").getIngredients());
 
     }
 }

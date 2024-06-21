@@ -15,9 +15,9 @@ import java.util.List;
 
 @DiscriminatorValue("topping")
 public class Topping extends ElementMenu {
-    @ManyToMany
-            (mappedBy = "ingredients")
-    List<Pizza> pizzas;
+//    @ManyToMany
+//            (mappedBy = "ingredients")
+//    List<Pizza> pizzas;
     public Topping() {
     }
 

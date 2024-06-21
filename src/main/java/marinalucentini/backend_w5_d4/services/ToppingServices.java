@@ -6,6 +6,8 @@ import marinalucentini.backend_w5_d4.repositories.ToppingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ToppingServices {
     @Autowired
@@ -20,5 +22,8 @@ public class ToppingServices {
         // 5. Log di avvenuto salvataggio
         System.out.println("Ingrediente " + topping.getName() + "salvata con successo nel db");
 
+    }
+    public Topping findByName(String name){
+        return toppingRepository.findByName(name);
     }
 }
